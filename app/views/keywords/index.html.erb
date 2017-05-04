@@ -3,7 +3,9 @@
     <h1>Nos mots clefs</h1>
     <ul>
         <% @keywords.each do |keyword|%>
-        <li><%= link_to keyword.name, keyword_path(keyword) %></li>
+        <li><%= link_to keyword.name, keyword_path(keyword) %>
+        <%= link_to "Supprimer", keyword_path(keyword), method: :delete %>
+        </li>
         <% end %>
     </ul>
     
