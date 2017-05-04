@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Keyword.destroy_all
+
+Keyword.create!(name:"achat spiruline")
+Keyword.create!(name:"spiruline")

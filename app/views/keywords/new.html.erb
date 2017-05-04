@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">Ajouter un mot clé</h1>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+           
+           <%= simple_form_for @keyword do |k| %>
+           <%= k.input:name, placeholder:"Keyword", label:"Mot clé" %>
+           <%= k.button:submit,value:"Ajouter",class:"btn btn-primary" %>
+           <% end %>
+         
+        </div>
+    </div>
+</div>
+

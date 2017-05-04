@@ -5,13 +5,21 @@ class KeywordsController < ApplicationController
     end
     
     def show
-        @keywords = Keyword.find(params[:id])
+        @keyword = Keyword.find(params[:id])
     end
     
     def new
+        @keyword = Keyword.new
     end
     
     def create
+        @keyword = Keyword.new(keyword_params)
+        if @keyword.save
+            redirect_to keywords_path
+        else    
+            render :new
+        end
+        
     end
     
     def edit
@@ -23,5 +31,10 @@ class KeywordsController < ApplicationController
     def destroy
     end
 
+    private 
+    
+    def keyword_params
+        params.require(:keyword).permit(:name)
+    end
     
 end
