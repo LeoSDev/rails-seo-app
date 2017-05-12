@@ -1,12 +1,6 @@
 class PagesController < ApplicationController
   def home
-     @keyword = params[:keyword]
-  
+     @keyword = Keyword.new
+    
   end
-  
-  def search
-   
-   
-  end
-
 end

@@ -1,9 +1,12 @@
-<div class="container text-center">
-    <h1>SEO Keywords</h1>
-    <h2>Est-ce que vos efforts SEO ont un véritable ROI ? </h2>
-    
-    <p>
-        <%= link_to "Tous les mots clefs", keywords_path,class: "btn btn-primary" %>
-    </p>
-    
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('background.jpg');">
+    <div class="banner-content">
+        <h1>Keyworth</h1></h1>
+        <h2>Est-ce que vos efforts SEO ont un véritable ROI ? </h2>
+            <%= simple_form_for @keyword, :html=> { class: 'navbar-wagon-search' } do |k| %>
+            <%= k.input:name, placeholder:"Calculer la concurrence organique",class:"navbar-wagon-search-input", label:false  %>
+            <%= k.button :button,class:"navbar-wagon-search-btn"  do %>
+                <i class="fa fa-search"></i>-->
+            <% end %>
+            <% end %>
+    </div>  
 </div>
